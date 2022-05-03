@@ -10,6 +10,9 @@ p{
 *{
     transition:all 0.6s;
 }
+body{
+    background-color: var(--color-bg)
+}   
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -17,7 +20,7 @@ html{
 section{
     padding: 8rem 7%;
     height: 100vh;
-    background-color: var(--color-bg)
+    
 }
 header{
     position: fixed;
@@ -47,29 +50,29 @@ header{
 /* Capitulo 1 */
 #cap1{
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
 }
-.cap1__main__section{
-    width: 75%;
-    height: 100%;
+.grid__container{
+    width: 100%;
+    height: 80%;
     text-align: center;
-    display: grid;
-
 }
-.cap1__main__section h2{
+.grid__container h2{
+    margin-bottom: 2rem;
     font-size: 4rem;
     color: var(--green1);
 }
-.cap1__cards{
+.grid__cards{
     width: 100%;
     height: 100%;
     display: grid;
     place-content: center;
     gap: 1rem;
-    grid-template-columns: repeat(4, 20rem);
-    grid-template-rows: repeat(2, 20rem);
+    grid-template-columns: repeat(2, minmax(5rem, 15rem));
+    grid-template-rows: repeat(3, minmax(5rem, 15rem));
 }
-.cap1__card{
+.grid__card{
     border-radius: 1rem;
     background: url('https://images.pexels.com/photos/1362534/pexels-photo-1362534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover no-repeat;
     display: flex;
@@ -77,33 +80,33 @@ header{
     justify-content: space-between;
     text-align: center;
 }
-.cap1__card h3{
+.grid__card h3{
     font-weight: 900;
     font-size: 2.5rem;
     color: var(--blue);
 }
-.cap1__card p{
+.grid__card p{
     font-size: 2rem;
     color: var(--blue);
     font-weight: 900;
 }
-.cap1__aside{
+.form__container{
     width: 100%;
     height: 100%;
 }
-.cap1__aside form{
+.form__container form{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.cap1__aside form label{
+.form__container form label{
     color: var(--green1);
     font-size: 2rem;
     font-weight: 700;
 }
-.cap1__aside form input{
+.form__container form input{
     color: #fff;
     background: var(--blue);
     border: .1rem solid #fff;
@@ -116,4 +119,10 @@ header{
 }
 .btn:hover{
     cursor: pointer;
+}
+@media screen and (max-width: 640px) {
+    #cap1{
+        grid-template-columns: 1fr;
+        row-gap: 10rem;
+    }
 }

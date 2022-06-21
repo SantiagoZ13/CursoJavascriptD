@@ -98,12 +98,12 @@ header{
     flex-direction: column;
     justify-content: center;
 }
-.form__container form label{
+label{
     color: var(--green1);
     font-size: 2rem;
     font-weight: 700;
 }
-.form__container form input{
+input{
     color: var(--blue);
     background: transparent;
     border: .2rem solid var(--blue);

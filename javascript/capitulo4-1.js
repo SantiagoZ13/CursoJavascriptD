@@ -19,7 +19,7 @@ const mostrarMateria = (materia) =>{
             document.write("Profesor: " + materias[i].profesor + "<br />");
             document.write("Estudiantes: " + materias[i].estudiantes + "<br /><br />");
         }else{
-
+            
         }
     }
 }
